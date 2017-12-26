@@ -50,7 +50,7 @@ body {
 .item {
     border: 1px solid black;
     border-radius: 5px;
-    height: 9vh;
+    height: 7vh;
     min-width: 70vh;
     padding: 0.5vh;
     padding-left: 1vh;
@@ -148,8 +148,9 @@ ul#emails-list > li > .item-link {
     width: 15vw;
     margin-bottom: 0.5vh;
 
-    overflow-y: auto;
-    overflow-wrap: break-word;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .inbox-sender {
@@ -159,8 +160,9 @@ ul#emails-list > li > .item-link {
     width: 15vw;
     height: 2em;
 
-    overflow-y: auto;
-    overflow-wrap: break-word;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /*flex parent and child*/
@@ -184,8 +186,9 @@ ul#emails-list > li > .item-link {
 /*flex child*/
 .inbox-content {
     width: 59vh;
-    overflow-y: auto;
-    overflow-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     flex: 3;
 }
