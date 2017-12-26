@@ -4,76 +4,79 @@ body {
 
 #toolbar {
     background-color: #2F4E6F;
-    width: 100%;
-    height: 100px;
+    width: 100vw;
+    height: 12vh;
     position: fixed;
     right: 0;
-    left: 0;
     top: 0;
 }
 
 /*Flex container*/
 #nav {
     background-color: #333;
-    width: 250px;
+    width: 18vw;
     height: 100%;
     position: fixed;
     left: 0;
-    top: 100px;
+    top: 12vh;
     padding-top: 10px;
 
     display: flex;
     flex-direction: column;
 }
 
+/*flex container*/
 #content {
     background-color: #98B1C4;
-    width: calc(100% - 250px);
-    height: calc(100% - 100px);
+    width: 82vw;
+    height: 88vh;
     position: fixed;
-    top: 100px;
-    left: 250px;
-    overflow: auto;
+    right: 0;
+    bottom: 0;
     z-index: -1;
+    overflow: auto;
 }
 
 #logo {
 	float: left;
-	margin: 20px 20px;
+	margin: 20px;
 	position: relative;
-	width: 13%;
-	height: 70%;
+	width: 13vw;
+	height: 10vh;
 	display: inline-block;
 }
 
-/*flex parent*/
+/*flex container*/
 .item {
     border: 1px solid black;
     border-radius: 5px;
     height: 9vh;
-    width: 70vh;
+    min-width: 70vh;
     padding: 0.5vh;
     padding-left: 1vh;
     font-family: Verdana, sans-serif;
     transition: all .2s ease-in-out;
 
     display: flex;
-    /*justify-content: space-around;*/
 }
 
-/*flex container*/
+/*flex container and child*/
 ul#emails-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
 }
 
 /*flex container and child*/
 ul#emails-list > li {
-    flex: 1;
+    /*flex: 1 0;*/
 
     display: flex;
     align-items: center;
@@ -89,7 +92,7 @@ ul#emails-list > li > .item-link {
 }
 
 #emails-list > li:nth-child(odd) .item {
-    background-color: #cccccc;
+    background-color: #dddddd;
 }
 
 #emails-list > li:nth-child(even) .item {
@@ -107,7 +110,7 @@ ul#emails-list > li > .item-link {
 /*Flex container and child*/
 .option {
 	background-color: gray;
-	width: 245px;
+	width: 17vw;
 	height: 40px;
 	margin-top: 5px;
     transition: margin-left 0.4s;
@@ -134,13 +137,14 @@ ul#emails-list > li > .item-link {
 /*flex parent and child*/
 .left-part {
 	display: inline-block;
-	width: 24vh;
+	width: 15vw;
     height: 80%;
 	float: left;
+    padding: 0.5vw;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -148,7 +152,7 @@ ul#emails-list > li > .item-link {
 	display: inline-block;
 	font-size: 1.3em;
     height: 2em;
-    width: 19vh;
+    width: 14vw;
     margin-bottom: 0.5vh;
 
     overflow-y: auto;
@@ -159,7 +163,7 @@ ul#emails-list > li > .item-link {
 	display: block;
 	float: left;
     font-size: 1em;
-    width: 19vh;
+    width: 14vw;
     height: 2em;
 
     overflow-y: auto;
@@ -171,11 +175,14 @@ ul#emails-list > li > .item-link {
 	display: inline-block;
 	width: 60vh;
     height: 80%;
-    padding: 0.6vh;
-    
+    padding: 0.5vh;
+
+    /*flex: 1 1 auto;*/
+
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: space-around;
 }
 
 /*flex child*/
@@ -185,7 +192,7 @@ ul#emails-list > li > .item-link {
 
 /*flex child*/
 .inbox-content {
-    width: 46vh;
+    width: 59vh;
     overflow-y: auto;
     overflow-wrap: break-word;
 
@@ -218,6 +225,7 @@ ul#emails-list > li > .item-link {
     transform: rotate(360deg);
 }
 
+/*flex child*/
 a {
     text-decoration: none;
     color: black;
@@ -226,7 +234,5 @@ a {
 /*flex child*/
 #important-email {
     color: red;
-    float: right;
-    bottom: 0;
-    right: 0;
+    padding-top: 1vh;
 }
