@@ -141,12 +141,11 @@ ul#emails-list > li > .item-link {
     justify-content: space-around;
 }
 
-
 .inbox-subject {
 	display: inline-block;
 	font-size: 1.3em;
     height: 2em;
-    width: 14vw;
+    width: 15vw;
     margin-bottom: 0.5vh;
 
     overflow-y: auto;
@@ -157,7 +156,7 @@ ul#emails-list > li > .item-link {
 	display: block;
 	float: left;
     font-size: 1em;
-    width: 14vw;
+    width: 15vw;
     height: 2em;
 
     overflow-y: auto;
