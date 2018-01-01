@@ -6,6 +6,7 @@ body {
     background-color: #2F4E6F;
     width: 100vw;
     height: 12vh;
+    /*min-height: 30px;*/
     position: fixed;
     right: 0;
     top: 0;
@@ -38,10 +39,9 @@ body {
 }
 
 #logo {
-	margin: 20px;
 	position: relative;
-	width: 225px;
-	height: 10vh;
+	width: 20%;
+	height: 90%;
 	display: inline-block;
 }
 
@@ -49,8 +49,8 @@ body {
 .item {
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0.5vh;
-    padding-left: 1vh;
+    padding: 4px;
+    padding-left: 4px;
     font-family: Verdana, sans-serif;
     transition: all .2s ease-in-out;
 
@@ -99,9 +99,11 @@ ul#emails-list > li > .item-link {
 /*Flex container and child*/
 .option {
 	background-color: gray;
-	width: 17vw;
+	width: 95%;
 	height: 40px;
 	margin-top: 5px;
+	color: white;
+	font-family: Verdana, sans-serif;
     transition: margin-left 0.4s;
 
     display: flex;
@@ -110,8 +112,6 @@ ul#emails-list > li > .item-link {
 
 /*Flex child*/
 .option > span {
-	color: white;
-	font-family: Verdana, sans-serif;
     margin-left: 5px;
 }
 
@@ -197,8 +197,8 @@ ul#emails-list > li > .item-link {
     background-color: #E15119;
     border: 1px solid transparent;
     border-radius: 100%;
-    right: 10px;
-    bottom: 10px;
+    right: 30px;
+    bottom: 20px;
     width: 40px;
     height: 40px;
     position: fixed;
@@ -232,6 +232,19 @@ a {
     .inbox-sender, .inbox-content {
         font-size: 0.75em;
     }
+
+    .option {
+        height: 30px;
+        font-size: 0.75em;
+    }
+    
+    #new-email { 
+        width: 30px;
+        height: 30px;
+        font-size: 0.6em;
+        bottom: 10px;
+        right: 25px;
+    }
 }
 
 @media all and (max-width: 500px) {
@@ -241,5 +254,18 @@ a {
 
     .inbox-sender, .inbox-content {
         font-size: 0.65em;
+    }
+
+    .option {
+        height: 20px;
+        font-size: 0.5em;
+    }
+    
+    #new-email { 
+        width: 20px;
+        height: 20px;
+        font-size: 0.4em;
+        bottom: 5px;
+        right: 20px;
     }
 }
