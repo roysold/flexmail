@@ -229,7 +229,7 @@ a {
         font-size: 0.8em;
     }
 
-    .inbox-sender, .inbox-content {
+    .inbox-sender, .right-part {
         font-size: 0.75em;
     }
 
@@ -252,7 +252,7 @@ a {
         font-size: 0.7em;
     }
 
-    .inbox-sender, .inbox-content {
+    .inbox-sender, .right-part {
         font-size: 0.65em;
     }
 
