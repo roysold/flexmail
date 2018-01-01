@@ -38,7 +38,6 @@ body {
 }
 
 #logo {
-	float: left;
 	margin: 20px;
 	position: relative;
 	width: 13vw;
@@ -50,8 +49,7 @@ body {
 .item {
     border: 1px solid black;
     border-radius: 5px;
-    height: 7vh;
-    min-width: 70vh;
+    /*height: 7vh;*/
     padding: 0.5vh;
     padding-left: 1vh;
     font-family: Verdana, sans-serif;
@@ -65,8 +63,8 @@ ul#emails-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
+    /*width: 100%;*/
+    /*height: 100%;*/
     overflow: auto;
 }
 
@@ -145,7 +143,7 @@ ul#emails-list > li > .item-link {
 	display: inline-block;
 	font-size: 1.3em;
     height: 2em;
-    width: 15vw;
+    /*width: 15vw;*/
     margin-bottom: 0.5vh;
 
     white-space: nowrap; 
@@ -157,7 +155,7 @@ ul#emails-list > li > .item-link {
 	display: block;
 	float: left;
     font-size: 1em;
-    width: 15vw;
+    /*width: 15vw;*/
     height: 2em;
 
     white-space: nowrap; 
@@ -168,13 +166,13 @@ ul#emails-list > li > .item-link {
 /*flex parent and child*/
 .right-part {
 	display: inline-block;
-	width: 60vh;
+	width: 40vw;
     height: 80%;
     padding: 0.5vh;
+    margin-left: 0.5vw;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: space-around;
 }
 
@@ -185,7 +183,6 @@ ul#emails-list > li > .item-link {
 
 /*flex child*/
 .inbox-content {
-    width: 59vh;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -229,4 +226,25 @@ a {
 #important-email {
     color: red;
     padding-top: 1vh;
+    align-self: flex-end;
+}
+
+@media all and (max-width: 800px) {
+    .inbox-subject {
+        font-size: 0.8em;
+    }
+
+    .inbox-sender, .inbox-content {
+        font-size: 0.75em;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .inbox-subject {
+        font-size: 0.7em;
+    }
+
+    .inbox-sender, .inbox-content {
+        font-size: 0.65em;
+    }
 }
